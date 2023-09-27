@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'icons';
+    src:  url('./fa-solid-900.woff2') format('woff2');
+}
+.icon {
+    font-family: icons;
+}

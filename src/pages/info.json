@@ -1,0 +1,22 @@
+{
+    "simple": {
+        "name": "Simple",
+        "icon": "\ue43c"
+    },
+    "scientific": {
+        "name": "Scientific",
+        "icon": "\uf1ec"
+    },
+    "converter": {
+        "name": "Converter",
+        "icon": "\uf545"
+    },
+    "formula": {
+        "name": "Formulas",
+        "icon": "\ue0bb"
+    },
+    "render": {
+        "name": "Renderer",
+        "icon": "\uf1fc"
+    }
+}

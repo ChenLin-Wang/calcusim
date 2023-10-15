@@ -5,6 +5,19 @@
     font-family: 'icons';
     src:  url('./fa-solid-900.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'math';
+    src:  url('./LatinmodernmathRegular-z8EBa.otf') format('otf');
+}
 .icon {
     font-family: icons;
+}
+.math {
+    font-family: math;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+*:focus {
+    outline: none;
 }

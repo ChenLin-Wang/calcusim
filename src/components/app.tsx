@@ -1,22 +1,23 @@
 import { useState } from "react";
 
+import { page_info, pages_info } from './types';
 import Head from './head';
 import Side from './side';
+import Body from './body';
 
-const pages : { [key:string] : {name:string,icon:string}} = require('../pages/info.json');
+const pages : pages_info = require('../pages/info.json');
 
 export default function App() {
-    const [ title, setTitle ] = useState<string>("Hello World");
-    const [ open, toggle ] = useState<boolean>(false);
+    const [ page, setPage ] = useState<page_info>({id:'',title:'Welcome to Calcusim',side:false});
     function toggleSide(){
-        toggle(e=>!e);
+        setPage(x=>({...x, side:!x.side}));
     }
-    function newPage(page:string){
-        setTitle(pages[page].name);
+    function openPage(id:string){
+        setPage(x=>({id:id, title:pages[id].name, side:x.side}));
     }
-
     return <div className="fixed inset-x-0 inset-y-0 bg-slate-950">
-        <Head menu={toggleSide} title={title} />
-        <Side open={open} pages={pages} page={newPage} />
+        <Head menu={toggleSide} title={page.title} />
+        <Side page={page} pages={pages} open={openPage} />
+        <Body page={page} />
     </div>
 }

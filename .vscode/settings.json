@@ -13,6 +13,7 @@
         "type_traits": "cpp",
         "variant": "cpp",
         "version": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp"
     }
 }

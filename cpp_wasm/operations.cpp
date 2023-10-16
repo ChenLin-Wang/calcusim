@@ -3,8 +3,6 @@
 
 using namespace std;
 
-#define TEST true
-
 #ifdef TEST
 #define EMSCRIPTEN_KEEPALIVE
 void test();

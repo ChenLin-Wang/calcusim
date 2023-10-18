@@ -1,14 +1,16 @@
-var sum = () => { return Module.cwrap('addition', 'number', ['array', 'number']); }
-var prod = () => { return Module.cwrap('multiplication', 'number', ['array', 'number']); }
-var sin = () => { return Module.cwrap('sine', 'number', ['number', 'number']); }
-var cos = () => { return Module.cwrap('cosine', 'number', ['number', 'number']); }
-var tan = () => { return Module.cwrap('tangle', 'number', ['number', 'number']); }
-var asin = () => { return Module.cwrap('asine', 'number', ['number', 'number']); }
-var acos = () => { return Module.cwrap('acosine', 'number', ['number', 'number']); }
-var atan = () => { return Module.cwrap('atangle', 'number', ['number', 'number']); }
-var exp = () => { return Module.cwrap('exponentiation', ['number', 'number']); }
-var fac = () => { return Module.cwrap('factorial', ['number']); }
-var log = () => { return Module.cwrap('logarithm', ['number', 'number']); }
+var sum = (nums, size) => { return Module.cwrap('addition', 'number', ['array', 'number'])(nums, size); }
+var prod = (nums, size) => { return Module.cwrap('multiplication', 'number', ['array', 'number'])(nums, size); }
+var sin = (degree, isRadian) => { return Module.cwrap('sine', 'number', ['number', 'number'])(degree, isRadian); }
+var cos = (degree, isRadian) => { return Module.cwrap('cosine', 'number', ['number', 'number'])(degree, isRadian); }
+var tan = (degree, isRadian) => { return Module.cwrap('tangle', 'number', ['number', 'number'])(degree, isRadian); }
+var asin = (rate, outputRadian) => { return Module.cwrap('asine', 'number', ['number', 'number'])(rate, outputRadian); }
+var acos = (rate, outputRadian) => { return Module.cwrap('acosine', 'number', ['number', 'number'])(rate, outputRadian); }
+var atan = (rate, outputRadian) => { return Module.cwrap('atangle', 'number', ['number', 'number'])(rate, outputRadian); }
+var exp = (num, times) => { return Module.cwrap('exponentiation', ['number', 'number'])(num, times); }
+var fac = (num) => { return Module.cwrap('factorial', ['number'])(num); }
+var log = (num, base) => { return Module.cwrap('logarithm', ['number', 'number'])(num, base); }
+var pi = () => { return Module.ccall('mathPi', 'number', null, null); }
+var eExp = (times) => { return Module.cwrap('e_exponentiation', ['number'])(times); }
 
 var toTypedArray_Double = function(arr) {
     var buf = new ArrayBuffer(arr.length * 8);

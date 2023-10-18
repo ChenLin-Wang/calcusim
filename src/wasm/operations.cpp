@@ -129,9 +129,11 @@ void test() {
             "\t6. arcsine\n"
             "\t7. arccosine\n"
             "\t8. arctangle\n"
-            "\t9. expnentiation\n"
+            "\t9. exponentiation\n"
             "\t10. factorial\n"
             "\t11. logarithm\n"
+            "\t12. pi\n"
+            "\t13. e exponentiation\n"
             "\t0. exit\n"
             "-------------------------\n"
             "test target: ";
@@ -186,6 +188,18 @@ void test() {
                 uint64_t num;
                 cout << "num: "; cin >> num;
                 cout << factorial(num) << endl;
+                break;
+            }
+
+            case 12: {
+                cout << mathPi() << endl;
+                break;
+            }
+
+            case 13: {
+                double times;
+                cout << "times: "; cin >> times;
+                cout << e_exponentiation(times) << endl;
                 break;
             }
             

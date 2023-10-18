@@ -107,11 +107,13 @@
         <hr><textarea class=emscripten id=output rows=8></textarea>
         <hr>
 
-        <button class="additionButton">Try to invoke function "addition"</button>
-		<button class="multiplicationButton">Try to invoke function "multiplication"</button>
-        <button class="sinTestButton">Try to invke function "sine"</button>
-        <button class="cosTestButton">Try to invke function "cosine"</button>
-        <button class="asinTestButton">Try to invke function "asine"</button>
+        <button class="additionButton">Try to invoke function "addition"</button><br>
+		<button class="multiplicationButton">Try to invoke function "multiplication"</button><br>
+        <button class="sinTestButton">Try to invke function "sine"</button><br>
+        <button class="cosTestButton">Try to invke function "cosine"</button><br>
+        <button class="asinTestButton">Try to invke function "asine"</button><br>
+        <button class="piTestButton">Try to invke function "mathPi"</button><br>
+        <button class="eTestButton">Try to invke function "e_exponentiation"</button><br>
 
         <script>
 
@@ -159,31 +161,42 @@
 
 
 			document.querySelector(".additionButton").addEventListener("click", function () {
-                var result = sum()(toTypedArray_Double([1, 2, 4, 5, 6, 7, 8]), 7)
+                var result = sum(toTypedArray_Double([1, 2, 4, 5, 6, 7, 8]), 7)
                 console.log("Product of 1,2,4,5,6,7,8 = " + result)
 			});
 
 			document.querySelector(".multiplicationButton").addEventListener("click", function () {
-                var result = prod()(toTypedArray_Double([1, 3, 4, 5]), 4)
+                var result = prod(toTypedArray_Double([1, 3, 4, 5]), 4)
                 console.log("Product of 1,3,4,5 = " + result)
 			});
 
             document.querySelector(".sinTestButton").addEventListener("click", function () {
-                var result = sin()(30, 0)
-                var result2 = sin()(3.1415926 / 6, 1)
+                var result = sin(30, 0)
+                var result2 = sin(3.1415926 / 6, 1)
                 console.log("sin 30 or sin pi/6 = " + result + ", " + result2)
             })
 
             document.querySelector(".cosTestButton").addEventListener("click", function () {
-                var result = cos()(60, 0)
-                var result2 = cos()(3.1415926 / 3, 1)
+                var result = cos(60, 0)
+                var result2 = cos(3.1415926 / 3, 1)
                 console.log("cos 60 or cos pi/3 = " + result + ", " + result2)
             })
 
             document.querySelector(".asinTestButton").addEventListener("click", function () {
-                var degreeResult = asin()(0.5, 0)
-                var radianResult = asin()(0.5, 1)
+                var degreeResult = asin(0.5, 0)
+                var radianResult = asin(0.5, 1)
                 console.log("asin 0.5 = Degree: " + degreeResult + ", Radian: " + radianResult)
+            })
+
+            document.querySelector(".piTestButton").addEventListener("click", function () {
+                console.log("pi = " + pi())
+            })
+
+            document.querySelector(".eTestButton").addEventListener("click", function () {
+                var e = eExp(1)
+                var e3 = eExp(3)
+                var e12 = eExp(1/2)
+                console.log("e = " + e + ", e^3 = " + e3 + ", sqrt e = " + e12)
             })
 
 

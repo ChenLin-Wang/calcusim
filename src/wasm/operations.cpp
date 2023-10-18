@@ -102,6 +102,12 @@ uint64_t EMSCRIPTEN_KEEPALIVE factorial(uint64_t num) {
 // 11
 double EMSCRIPTEN_KEEPALIVE logarithm(double num, double base) { return log(num) / log(base); }
 
+// 12
+double EMSCRIPTEN_KEEPALIVE mathPi() { return M_PI; }
+
+// 13
+double EMSCRIPTEN_KEEPALIVE e_exponentiation(double times) { return pow(M_E, times); }
+
 #ifdef __cplusplus
 }
 #endif

@@ -56,3 +56,4 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode
 .gitignore
 cpp_wasm/emsdk
+node_modules

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.af5c2ab2.css",
+    "main.js": "/static/js/main.8a65a2bf.js",
+    "static/media/LatinmodernmathRegular-z8EBa.otf": "/static/media/LatinmodernmathRegular-z8EBa.ba2af73827ec5f808cd7.otf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2f8c37423114769918de.woff2",
+    "index.html": "/index.html",
+    "main.af5c2ab2.css.map": "/static/css/main.af5c2ab2.css.map",
+    "main.8a65a2bf.js.map": "/static/js/main.8a65a2bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af5c2ab2.css",
+    "static/js/main.8a65a2bf.js"
+  ]
+}

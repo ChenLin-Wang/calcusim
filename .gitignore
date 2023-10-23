@@ -57,3 +57,4 @@ Temporary Items
 .gitignore
 cpp_wasm/emsdk
 node_modules
+build
